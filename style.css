@@ -1,0 +1,54 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333333; */
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+body {
+    background-color: #111111;
+    font-family: 'cascadia code', monospace;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+}
+
+p {
+    color: aliceblue;
+    width: 500px;
+    margin:auto;
+    padding:10px;
+    text-align: center;
+}
+
+h1 {
+    color: aliceblue;
+    width: 500px;
+    margin:auto;
+    padding:10px;
+    text-align: center;
+    margin-top: 60px;
+}
