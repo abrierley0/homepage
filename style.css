@@ -31,6 +31,14 @@ header {
 main {
   background-color: white;
 }
+/* 
+main.cfm {
+  width:50%;
+} */
+
+div.cfm {
+  margin:auto;
+}
 
 body {
     background-color: white;
@@ -61,10 +69,18 @@ p {
     padding: 1rem;
 }
 
+/* p.cfm {
+  width:50%;
+} */
+
 h1 {
     color: black;
     text-align: center;
+}
 
+h2 {
+  margin-left: 2rem;
+  text-decoration: underline;
 }
 
 

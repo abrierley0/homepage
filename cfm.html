@@ -18,24 +18,62 @@
             </ul>
         </header>
         <main>
-            <h1>Adam Brierley MSc</h1>
-            <div class="gallery">
-                <img src="figures/cloisters_b_and_w.png" alt="adam brierley" width="250px" height="auto">
-            </div>
-            <div style="width: 350px;margin:auto">
-            <p>
-                Graduated from the University of Glasgow with a degree in Aeronautical Engineering 2020-2024.
-            </p>
-            <p>
-                In 2023, interned at a materials research lab at the University of Glasgow working on 3D-printed multi-functional materials.
-            </p>
-            <p>
-                In 2024, sold whisky over the best whisky bar in Glasgow and developed an interest in the whisky industry.
-            </p>
-            <p>
-                After graduating in Scotland, studied a master's degree in Computational Fluid Dynamics at Cranfield University 2024-2025, specialising in solvers for incompressible flows of fluid. 
-                Expected first classification (equivalent) pending thesis mark.
-            </p>
+            <h1>Computational Fluid Mechanics Work</h1>
+            <div class="cfm">
+                <h2>21/10/2025</h2>
+                    <p>
+                        It's been a long time since I thought about my master's thesis topic. 
+                        I worked on incompressible flow modelling. That means you 
+                        can neglect density variation in the incompressible Navier-Stokes.  
+                        That means the divergence of velocity is zero.
+                        I wrote the streamfunction-vorticity formulation first, 
+                        which is only applicable to two dimensions.
+                        This is because the streamfunction only exists in two dimensions.
+                        I validated the results produced by my code using the lid-driven 
+                        square
+                        cavity benchmark (2D), comparing centreline velocities. The code was 
+                        written in Python and is currently public. 
+                        <a href="https://github.com/abrierley0/incompressible_repo/tree/main/psi_omega">Link</a>.
+                    </p>
+                    <img src="figures/run17_div_u.png" alt="divergence of velocity" width="300" height="auto" style="margin:0 2rem; outline: auto;">
+                    <p>
+                        The figure above shows divergence of velocity for the vector potential-vorticity 
+                        formulation. It is a slice of the centreplane of a cube, 
+                        where the cube is full of continuous fluid, and the lid is 
+                        moving from left to right. This is a standard benchmark against 
+                        which to test the results of your code.
+                        The results are well-known. In both
+                        the streamfunction-vorticity formulation (2D) and the 
+                        vector-potential vorticity formulation (3D), the divergence of
+                        velocity is satisfied explicitly. This is the advantage of 
+                        vorticity formulations over, say, the primitive variable 
+                        approach. The main focus of my thesis was the 
+                        vector-potential vorticity formulation, which is harder to 
+                        implement. The open source code is available: 
+                        <a href="https://github.com/abrierley0/incompressible_repo/tree/main/vector_psi_omega">Link</a>.
+                    </p>
+                    <p style="text-decoration: underline;">In layman's terms:</p>
+                    <p>Imagine a solid cube full of any fluid - air, water, 
+                        Coca-Cola. Now imagine moving the upper surface in some direction.
+                        How would the fluid in the container move? What pattern would it
+                        make? Solving a complex equation approximately, with the aid 
+                        of a computer, allows you predict what the pattern would be. 
+                        You 
+                        can say, at any point in the cube (for the most part), 
+                        and even at any particular instance in time, precisely 
+                        what the temperature, pressure, speed, and direction of 
+                        motion of the fluid will be. The resulting
+                        pattern that your code produces, can be compared against
+                        experiments, so you can check it's true. Here's one 
+                        such pattern:
+                    </p>
+                    <img src="figures/run18_v.png" alt="v velocity, Re=100" width="300" height="auto" style="margin:0 2rem; outline: auto;">
+                    <p>
+                        What does this show?
+                        The speed of motion of the fluid in the up and down direction, 
+                        on a cross-section of the cube along the centreplane. Lid motion 
+                        is from left to right.
+                    </p>
             </div>
         </main>
     </body>
