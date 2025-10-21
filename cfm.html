@@ -22,10 +22,13 @@
             <div class="cfm">
                 <h2>21/10/2025</h2>
                     <p>
-                        It's been a long time since I thought about my master's thesis topic. 
+                        It's been a long time since I thought about my master's thesis. 
                         I worked on incompressible flow modelling. That means you 
-                        can neglect density variation in the incompressible Navier-Stokes.  
-                        That means the divergence of velocity is zero.
+                        can neglect density variation of the fluid medium, which usually means
+                        low speed.  
+                        It means the divergence of velocity is zero.
+                    </p>
+                    <p>
                         I wrote the streamfunction-vorticity formulation first, 
                         which is only applicable to two dimensions.
                         This is because the streamfunction only exists in two dimensions.
@@ -45,11 +48,13 @@
                         The results are well-known. In both
                         the streamfunction-vorticity formulation (2D) and the 
                         vector-potential vorticity formulation (3D), the divergence of
-                        velocity is satisfied explicitly. This is the advantage of 
+                        velocity is satisfied explicitly. Hence why divergence
+                        above is small. This is the advantage of 
                         vorticity formulations over, say, the primitive variable 
                         approach. The main focus of my thesis was the 
                         vector-potential vorticity formulation, which is harder to 
-                        implement. The open source code is available: 
+                        implement. This method requires more work to be 
+                        workable. The open source code is available: 
                         <a href="https://github.com/abrierley0/incompressible_repo/tree/main/vector_psi_omega">Link</a>.
                     </p>
                     <p style="text-decoration: underline;">In layman's terms:</p>
@@ -57,7 +62,7 @@
                         Coca-Cola. Now imagine moving the upper surface in some direction.
                         How would the fluid in the container move? What pattern would it
                         make? Solving a complex equation approximately, with the aid 
-                        of a computer, allows you predict what the pattern would be. 
+                        of a computer, allows you predict what the patterns would be. 
                         You 
                         can say, at any point in the cube (for the most part), 
                         and even at any particular instance in time, precisely 
